@@ -1,11 +1,7 @@
-- hosts: localhost
-  connection: local
-  become: true
-  tasks:
-    - name: Install multi packages
-      apt:
-        name:
-          - htop
-          - mc
-          - tmux
-        state: latest
+- name: Install multi packages
+  yum:
+    name:
+      - htop
+      - mc
+      - tmux
+    state: latest

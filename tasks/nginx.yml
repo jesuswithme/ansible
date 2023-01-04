@@ -1,9 +1,5 @@
-- hosts: localhost
-  connection: local
-  become: true
-  tasks:
-    - name: Install nginx service
-      service:
-        name: nginx
-        state: present
-        enabled: yes
+- name: Install nginx service
+  service:
+    name: nginx
+    state: present
+    enabled: true 
