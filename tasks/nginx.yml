@@ -1,4 +1,8 @@
 - name: Install nginx service
+  yum:
+    name: nginx
+    state: latest 
+- name: Ensure nginx service is running
   service:
     name: nginx
     state: started
