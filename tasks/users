@@ -1,0 +1,12 @@
+- name: create classadmin user
+  user:
+    name: classadmin
+    system: yes
+
+- name: copy sudoers_classadmin
+  copy:
+    src: files/sudoers_classadmin
+    dest: /etc/sudoers.d/classadmin
+    owner: root
+    group: root
+    mode: 0440
